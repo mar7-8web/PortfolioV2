@@ -1,0 +1,240 @@
+:root {
+    --navbar-background-color: #f2f2f2;
+    --navbar-item-hovered-color:rgb(204, 147, 68);
+    --navbar-separator-color:#000000;
+    --navbar-icon-color:rgba(156, 91, 0, 0.644);
+    --navbar-text-color:black;
+    --navbar-transition-speed: .2s;
+    --primary-color:rgb(156, 73, 0);
+    --navbar-logo-background-color:#dfe4df;
+  }
+
+
+
+html, body {
+    margin: 0;
+    font-family: 'Noto Serif', serif;
+    font-size:16px;
+    background-color: burlywood;
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+
+}
+
+main {
+    padding: 1rem 4rem;
+    margin-left: 5rem;
+    text-align: center;
+    color: white; 
+  
+}
+
+.homepage-main {
+    display: flex;
+    flex-direction: row; /* Utilisez une disposition en ligne pour aligner horizontalement */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 5rem;
+    color: white;
+}
+
+.homepage-main h1 {
+    font-size: 2.5rem;
+    margin-right: 1rem; /* Ajoutez une marge à droite du titre */
+}
+
+.homepage-main h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-right: 1rem; /* Ajoutez une marge à droite du sous-titre */
+}
+
+.homepage-main .photo {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.homepage-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1; /* Définit un z-index supérieur à celui de la barre de navigation */
+}
+
+.homepage-content h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem; /* Ajoute une marge en bas pour l'espace vertical */
+}
+
+.homepage-content a {
+    margin-right: 1rem;
+}
+
+.homepage-content .button {
+    margin-top: 1rem;
+    z-index: 0; /* Définit un z-index inférieur à celui de la barre de navigation */
+}
+
+.homepage-content .fab.fa-linkedin,
+.homepage-content .fab.fa-github-square {
+    font-size: 3rem; /* Définir la taille des icônes */
+    margin-right: 1rem;
+}
+
+
+.probutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.btsalign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+    width:5rem;
+    position:fixed;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    background:var(--navbar-background-color);
+    box-shadow: rgba(12,43, 30, 0.2) 0 4px 14px;
+    transition: width var(--navbar-transition-speed) ease;
+    z-index: 2; /* Définit un z-index supérieur à celui du contenu principal */
+  }
+
+  .navbar:hover {
+    width:15rem;
+}
+
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100%;
+}
+
+.button {
+  background-color: rgb(204, 141, 68);
+  box-shadow: rgb(0, 0, 0);
+  color: white;
+ padding: 1em 1.5em;
+ position: relative;
+ text-decoration: none;
+ display: inline-block;
+}
+.navbar-item {
+    width: 100%;
+    border-bottom:solid 1px var(--navbar-separator-color);
+    transition: background-color var(--navbar-transition-speed);
+  }
+  
+  .navbar-item:hover {
+    background-color:var(--navbar-item-hovered-color);
+  }
+
+  ul {
+    list-style: none;
+  }
+  
+  .pdp {
+    border-radius: 30%;
+    
+  }
+  
+  .navbar-link {
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    height:5rem;
+    width:100%;
+    text-decoration: none;
+  }
+  
+  .navbar-icon {
+    text-align: center;
+    font-size: 1.5rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    color:var(--navbar-icon-color);
+    transition:var(--navbar-transition-speed);
+  }
+  
+  .navbar-item:hover .navbar-icon {
+    color:var(--primary-color);
+  }
+  
+  .navbar-title {
+    color:var(--navbar-text-color);
+  }
+  
+  .navbar:not(:hover) .navbar-title {
+    display:none;
+  }
+  
+  .logo {
+    background:var(--navbar-logo-background-color);
+  }
+  
+  .logo .navbar-title {
+    font-size:1.5rem;
+    font-weight:bold;
+    margin-left:1.5rem;
+  }
+  
+  .navbar:hover .logo .navbar-icon {
+    transform:rotate(180deg);
+  }
+  
+
+  @media only screen and (max-width:1024px) {
+    .navbar {
+      top:auto;
+      width:100%;
+      bottom:0px;
+    }
+  
+    .navbar:hover {
+      width:100%;
+    }
+  
+    .navbar-menu {
+      flex-direction: row;
+    }
+  
+    .logo {
+      display:none;
+    }
+  
+    main {
+      margin-left:0;
+      margin-bottom:5rem;
+    }
+  
+    .navbar:hover .navbar-title {
+      display:none;
+    }
+  
+    .navbar-icon {
+      min-width:auto;
+      margin:0;
+    }
+  
+    .navbar-link {
+      justify-content: center;
+    }
+}
