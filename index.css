@@ -101,6 +101,26 @@ main {
   justify-content: center;
 }
 
+.project-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 1px;
+  margin-bottom: px;
+}
+
+.project-section img {
+  max-width: 90%;
+  height: auto;
+}
+
+.button {
+  margin: 5px;
+}
+
+
 .navbar {
     width:5rem;
     position:fixed;
