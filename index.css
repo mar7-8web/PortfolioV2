@@ -39,7 +39,7 @@ main {
     align-items: center;
     height: 100vh;
     padding: 5rem;
-    color: white;
+    color: black;
 }
 
 .homepage-main h1 {
@@ -118,6 +118,7 @@ main {
 
 .button {
   margin: 5px;
+  border-radius: 5px;
 }
 
 
@@ -219,6 +220,23 @@ main {
   .navbar:hover .logo .navbar-icon {
     transform:rotate(180deg);
   }
+
+    .info {
+      margin-left: 8%;
+      margin-top: 3%;
+  }
+  
+  .info h1 {
+      font-size: 40px !important;
+      color: #000000 !important;
+  }
+  
+  .info h1 span {
+      color: #634400;
+  }
+  
+  
+  
   
 
   @media only screen and (max-width:1024px) {
